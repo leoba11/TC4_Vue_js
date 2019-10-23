@@ -10,7 +10,7 @@
       case 2:
          $cantones = array(
             array('id' => 1, 'nombre' => 'Alajuela'), 
-            array('id' => 2, 'nombre' => 'San Rafael') 
+            array('id' => 2, 'nombre' => 'San Ramón') 
          );
          break;
       default:
