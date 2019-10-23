@@ -4,7 +4,7 @@
        case 1: // SJ
        {
            switch($request->canton) {
-                case 1:
+                case 1: // Central
                     $distritos = array(
                         array('id' => 1, 'nombre' => 'Carmen'),
                         array('id' => 2, 'nombre' => 'Merced'),
@@ -14,7 +14,7 @@
                         array('id' => 6, 'nombre' => 'La Uruca')
                         );
                         break;
-                case 2:
+                case 2: // Pavas
                     $distritos = array(
                         array('id' => 1, 'nombre' => 'Alfa'),
                         array('id' => 2, 'nombre' => 'Asturias'),
