@@ -24,6 +24,9 @@
                         array('id' => 6, 'nombre' => 'Rohrmoser')
                         );
                         break;
+                default:
+                    $distritos = array();
+                    break;
            }
            break;
        }
@@ -54,6 +57,9 @@
                         array('id' => 5, 'nombre' => 'Tacares')
                         );
                         break;
+                default:
+                    $distritos = array();
+                    break;
             }
             break;
        }
@@ -89,6 +95,9 @@
                         array('id' => 3, 'nombre' => 'San Joaquín')
                         );
                         break;
+                default:
+                    $distritos = array();
+                    break;
             }
             break;
        }
@@ -132,6 +141,9 @@
                         array('id' => 3, 'nombre' => 'Juan Viñas')
                         );
                         break;
+                default:
+                    $distritos = array();
+                    break;
             }
             break;
        }
@@ -175,6 +187,9 @@
                         array('id' => 3, 'nombre' => 'Puerto Carrillo')
                         );
                         break;
+                default:
+                    $distritos = array();
+                    break;
             }
             break;
        }
@@ -211,6 +226,9 @@
                         array('id' => 5, 'nombre' => 'Aguabuena')
                         );
                         break;
+                default:
+                    $distritos = array();
+                    break;
             }
             break;
        }
@@ -239,6 +257,9 @@
                         array('id' => 4, 'nombre' => 'Sixaola')
                         );
                         break;
+                default:
+                    $distritos = array();
+                    break;
             }
             break;
        }
