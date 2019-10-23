@@ -3,7 +3,7 @@
     <head>
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
         <script src="https://cdn.jsdelivr.net/vue.resource/1.3.1/vue-resource.min.js"></script>
-        <title>Geografía</title>
+        <title>TC4 Vue.js</title>
         <meta charset="utf-8">
     </head>
     <body>
@@ -13,14 +13,22 @@
         <br>
         <form id="form">
             <select id="provincia" name="provincia" onchange="cantones(this.options[this.selectedIndex].value);" required>
-                <option value="">Escoja una provincia</option>
+                <option value="">Seleccionar una provincia</option>
                 <option v-for="provincia in provincias" v-bind:value="provincia.id">{{provincia.nombre}}</option>
             </select>
             <br />
             <br />
-            <select id="canton" name="canton" onchange="provincia=document.getElementById('provincia');distritos(provincia.options[provincia.selectedIndex].value, this.options[this.selectedIndex].value);" required>
-                <option value="">Escoja un cantón</option>
+
+            <select id="canton" name="canton" onchange="provincia=document.getElementById('canton');distritos(provincia.options[provincia.selectedIndex].value, this.options[this.selectedIndex].value);" required>
+                <option value="">Seleccionar un cantón</option>
                 <option v-for="canton in cantones" v-bind:value="canton.id">{{canton.nombre}}</option>
+            </select>
+            <br />
+            <br />
+
+            <select id="distrito" name="distrito" onchange="canton=document.getElementById('canton');provincia=document.getElementById('provincia');distritos(provincia.options[provincia.selectedIndex].value, canton.options[canton.selectedIndex].value);" required>
+                <option value="">Seleccionar un distrito</option>
+                <option v-for="distrito in distritos" v-bind:value="distrito.id">{{distrito.nombre}}</option>
             </select>
         </form>
         <script>
@@ -50,6 +58,19 @@
                 }, function(){
                     alert('Error!');
                 });
+          }
+
+          function distritos(provincia, canton) {
+              form.$http.post('distritos.php',
+              {
+                  provincia: provincia,
+                  canton: canton
+              }
+              ).then(function(response){
+                  form.distritos = response.body;
+              }, function(){
+                  alert('ERROR!!!')
+              });
           }
         </script>
     </body>

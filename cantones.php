@@ -3,10 +3,8 @@
  switch($request->id) {
      case 1:
         $cantones = array(
-           array('id' => 1, 'nombre' =>
-'Central'), 
-           array('id' => 2, 'nombre' =>
-'Pavas') 
+           array('id' => 1, 'nombre' => 'Central'), 
+           array('id' => 2, 'nombre' => 'Pavas') 
         );
         break;
      case 2:
