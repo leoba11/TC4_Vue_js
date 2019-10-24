@@ -45,8 +45,8 @@
          $cantones = array(
             array('id' => 1, 'nombre' => 'Quepos'), 
             array('id' => 2, 'nombre' => 'Parrita'),
-            array('id' => 2, 'nombre' => 'Buenos Aires'),
-            array('id' => 2, 'nombre' => 'Coto Brus')
+            array('id' => 3, 'nombre' => 'Buenos Aires'),
+            array('id' => 4, 'nombre' => 'Coto Brus')
          );
          break;
       case 7: // Limón
